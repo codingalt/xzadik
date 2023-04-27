@@ -1,0 +1,112 @@
+.hero {
+  width: 100%;
+  min-height: 450px;
+  background-color: var(--orange);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(138deg, #e221db, #ee8027); */
+  background: linear-gradient(92.32deg, #E62E6E 4.5%, #CE2892 46.71%, rgba(156, 26, 195, 0.88) 71.41%, rgba(140, 22, 211, 0.79) 79.55%, rgba(112, 14, 240, 0.9) 110.74%);
+  background-size: 500% 400%;
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  -o-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+.container .h-inner {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.h-container {
+  height: 100%;
+  margin-top: -1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.h-inner span:nth-child(1) {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+  color: lightgray;
+  opacity: .8;
+}
+
+.h-inner span:nth-child(2) {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 41%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 41%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 41%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 41%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 41%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 41%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 41%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 41%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .hero{
+      min-height: 230px;
+      margin-top: 73px;
+    }
+    .h-container{
+      margin-top: 0rem;
+    }
+    .container .h-inner{
+      gap: 0.1rem;
+    }
+    .h-inner span:nth-child(1) {
+      font-size: 1.15rem;
+      font-weight: 700;
+      opacity: .9;
+    }
+    
+    .h-inner span:nth-child(2) {
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+}

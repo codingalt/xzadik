@@ -1,0 +1,78 @@
+.contact-us{
+    min-height: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contact-us .row label{
+    color: #fff;
+    font-size: 1.06rem;
+}
+
+.contact-us>form{
+    width: 55%;
+    margin: .4rem auto;
+}
+
+.contact-us .row input{
+    background-color: #303030;
+    height: 3.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+}
+
+.contact-us .row textarea{
+    background-color: #303030;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+}
+
+.contact-us .row textarea:focus{
+    box-shadow: none !important;
+}
+
+.contact-us .row input:focus{
+    box-shadow: none !important;
+}
+
+.contact-us .form-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-btn button{
+    background-color: #4C4C4C;
+    color: #fff;
+    font-weight: 500;
+    width: 11rem;
+    height: 2.9rem;
+    outline: none;
+    border: none;
+    border-radius: 11px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-us>form{
+        width: 89%;
+        margin: .4rem auto;
+    }
+    .contact-us .row input{
+        height: 3rem;
+    }
+    .contact-us .row label{
+        font-size: 1.01rem;
+    }
+}
