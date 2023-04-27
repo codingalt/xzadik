@@ -24,9 +24,9 @@ const corsOptions = {
   // Linking Routes
   app.use(require("./Routes/ProjectsRoute"));
 
-  app.get('/',(req,res) =>{
-    res.send('API is Running Successfully.')
-  })
+  // app.get('/',(req,res) =>{
+  //   res.send('API is Running Successfully.')
+  // })
 
   if (
     process.env.NODE_ENV === "production" ||
