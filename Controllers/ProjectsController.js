@@ -34,12 +34,15 @@ const addProject = async (req, res) => {
     });
   }
     const { workType, liscense, keyword, projectType } = req.body;
-    if (!workType || !liscense || !keyword || !projectType) {
+    console.log(req.body);
+    if (!workType || !liscense || !keyword || projectType === null) {
       return res.status(400).json({
         message: "Please fill out all the fields properly",
         success: false,
       });
     }
+    console.log("Public Id", projectLink.slice(-1)[0].public_id);
+    console.log("url", projectLink.slice(-1)[0].url);
     const newProject = new ProjectModel({
       workType,
       liscense,
@@ -55,7 +58,8 @@ const addProject = async (req, res) => {
       .status(200)
       .json({ result, success: true });
   } catch (error) {
-    res.status(500).json({ message: error.message, success: false });
+    console.log(error);
+    res.status(500).json({ message: error, success: false });
   }
 };
 
