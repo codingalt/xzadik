@@ -33,19 +33,18 @@ const addProject = async (req, res) => {
       url: result.secure_url,
     });
   }
-    const { workType, liscense, keyword } = req.body;
-    if (!workType || !liscense || !keyword) {
-      return res
-        .status(400)
-        .json({
-          message: "Please fill out all the fields properly",
-          success: false,
-        });
+    const { workType, liscense, keyword, projectType } = req.body;
+    if (!workType || !liscense || !keyword || !projectType) {
+      return res.status(400).json({
+        message: "Please fill out all the fields properly",
+        success: false,
+      });
     }
     const newProject = new ProjectModel({
       workType,
       liscense,
       keyword,
+      projectType,
       projectImg: {
         public_id: projectLink.slice(-1)[0].public_id,
         url: projectLink.slice(-1)[0].url,
